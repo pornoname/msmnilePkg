@@ -73,8 +73,6 @@
   }
 # UEFI Shell Change End
 
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
-
 # CUST_LOGO Change Start.
   !if $(CUST_LOGO) == 1
     FILE FREEFORM = PCD(gOemPkgTokenSpaceGuid.PcdLogoFile) {
