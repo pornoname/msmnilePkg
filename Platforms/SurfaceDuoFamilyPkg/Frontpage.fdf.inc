@@ -25,6 +25,10 @@
   INF OemPkg/BootMenu/BootMenu.inf
   INF PcBdsPkg/MsBootPolicy/MsBootPolicy.inf
   INF SurfaceDuoFamilyPkg/FrontPage/FrontPage.inf
+  # INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelErrataPatcher.inf
+  # INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/SimpleInitMain.inf
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelFdtDxe.inf
 
   FILE FREEFORM = PCD(gOemPkgTokenSpaceGuid.PcdFrontPageLogoFile) {
     SECTION RAW = Epsilon/BOOT.XF.3.0-00527-SM8150LZB-1/RawFiles/Logo
@@ -73,8 +77,6 @@
   }
 # UEFI Shell Change End
 
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
-
 # CUST_LOGO Change Start.
   !if $(CUST_LOGO) == 1
     FILE FREEFORM = PCD(gOemPkgTokenSpaceGuid.PcdLogoFile) {
@@ -88,10 +90,6 @@
     }
   !endif
 # CUST_LOGO Change End.
-
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelErrataPatcher.inf
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/SimpleInitMain.inf
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelFdtDxe.inf
 
 ################################################################
 
