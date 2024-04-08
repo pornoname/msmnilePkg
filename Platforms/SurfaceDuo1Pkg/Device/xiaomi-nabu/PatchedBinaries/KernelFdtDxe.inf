@@ -7,8 +7,8 @@
   ENTRY_POINT                    = KernelFdtMain
 
 [Binaries.AARCH64]
-   DXE_DEPEX|LinuxSimpleMassStorage.depex|*
-   PE32|LinuxSimpleMassStorage.efi|*
+   DXE_DEPEX|KernelFdtMain.depex|*
+   PE32|KernelFdtMain.efi|*
 
 [Depex]
   TRUE

@@ -1,0 +1,15 @@
+[Defines]
+  INF_VERSION                    = 0x0010005
+  BASE_NAME                      = KernelErrataPatcher
+  FILE_GUID                      = 964EFA94-9929-4EF8-9E68-8F6F6FA62E63
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = KernelErrataPatcherEntryPoint
+
+[Binaries.AARCH64]
+   DXE_DEPEX|KernelErrataPatcher.depex|*
+   PE32|KernelErrataPatcher.efi|*
+
+[Depex]
+  TRUE
+
