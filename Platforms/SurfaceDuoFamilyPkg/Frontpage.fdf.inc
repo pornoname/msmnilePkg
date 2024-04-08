@@ -66,13 +66,14 @@
   !endif
 ################################################################
 
-  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
 # UEFI Shell Change Start
- # FILE APPLICATION = 6D77B2BB-69EB-42AB-BECF-4F40C89568C3 {
-  #  SECTION PE32= SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/SimpleInitMain_body.efi
-  #  SECTION UI= "SimpleInitMain"
- # }
+  FILE APPLICATION=PCD(gPcBdsPkgTokenSpaceGuid.PcdShellFile) {
+    SECTION PE32=$(OUTPUT_DIRECTORY)/$(TARGET)_$(TOOL_CHAIN_TAG)/AARCH64/Shell.efi
+    SECTION UI= "EdkShell"
+  }
 # UEFI Shell Change End
+
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
 
 # CUST_LOGO Change Start.
   !if $(CUST_LOGO) == 1
