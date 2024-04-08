@@ -66,9 +66,9 @@
   !endif
 ################################################################
 # UEFI Shell Change Start
-  FILE APPLICATION=PCD(gPcBdsPkgTokenSpaceGuid.PcdShellFile) {
+  FILE APPLICATION = 6D77B2BB-69EB-42AB-BECF-4F40C89568C3 {
     SECTION PE32= SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/SimpleInitMain_body.efi
-    SECTION UI= "EdkShell"
+    SECTION UI= "SimpleInitMain"
   }
 # UEFI Shell Change End
 
