@@ -73,6 +73,8 @@
   }
 # UEFI Shell Change End
 
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/LinuxSimpleMassStorage.inf
+
 # CUST_LOGO Change Start.
   !if $(CUST_LOGO) == 1
     FILE FREEFORM = PCD(gOemPkgTokenSpaceGuid.PcdLogoFile) {
@@ -86,6 +88,11 @@
     }
   !endif
 # CUST_LOGO Change End.
+
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelErrataPatcher.inf
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/SimpleInitMain.inf
+  INF SurfaceDuo1Pkg/Device/xiaomi-nabu/PatchedBinaries/KernelFdtDxe.inf
+
 ################################################################
 
   !include $(SHARED_CRYPTO_PATH)/Driver/Bin/CryptoDriver.DXE.inc.fdf
